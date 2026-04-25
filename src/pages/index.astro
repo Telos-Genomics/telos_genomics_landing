@@ -1,17 +1,19 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.svelte";
+import WhoIsItFor from "../components/WhoIsItFor.svelte";
+import HowItWorks from "../components/HowItWorks.svelte";
+import WhyNow from "../components/WhyNow.svelte";
+import ContactUs from "../components/ContactUs.svelte";
 
+const canonicalUrl = "https://telosgenomics.bio";
+const excerpt = "";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Telos Genomics" canonicalUrl={canonicalUrl} excerpt={excerpt}>
+	<Hero client:load />
+	<WhoIsItFor client:load />
+	<HowItWorks client:load />
+	<WhyNow client:only />
+	<ContactUs client:load />
+</Layout>

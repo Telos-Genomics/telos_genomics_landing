@@ -1,0 +1,61 @@
+---
+import "/src/styles/global.css";
+import Header from "../components/Header.svelte";
+import Footer from "../components/Footer.svelte";
+
+// Recibe la prop 'title' desde la página que lo use
+const { title = "Telos Genomics", excerpt, tags, canonicalUrl } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={excerpt} />
+        <meta name="keywords" content={tags} />
+        <meta name="author" content="Telos Genomics" />
+        <link
+            rel="canonical"
+            href={canonicalUrl ?? "https://telosgenomics.bio"}
+        />
+        <!-- Título dinámico -->
+        <title>
+            {title ? `${title} - Home` : "Telos Genomics"}
+        </title>
+        <script
+            type="text/partytown"
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+        ></script></head
+    >
+    <!-- Google tag (gtag.js) -->
+
+    <script type="text/partytown">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-XXXXXXXXXX");
+    </script>
+    <body>
+        <Header client:load />
+        <slot />
+        <Footer />
+    </body>
+</html>
+
+<style>
+    :global(body) {
+        background-color: #f5f3f5;
+        color: #191919;
+    }
+    :global(.dark body) {
+        background-color: #212120;
+        color: #f5f3f5;
+    }
+</style>

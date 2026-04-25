@@ -12,6 +12,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.1.5"
+    "@astrojs/netlify": "^7.0.6",
+    "@astrojs/partytown": "^2.1.6",
+    "@astrojs/svelte": "^8.0.4",
+    "@lucide/svelte": "^1.8.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.5",
+    "flowbite-svelte": "^1.33.1",
+    "flowbite-svelte-blocks": "^2.1.0",
+    "flowbite-svelte-icons": "^3.1.0",
+    "resend": "^6.12.2",
+    "svelte": "^5.55.2",
+    "tailwindcss": "^4.2.2",
+    "three": "^0.183.2",
+    "typescript": "^6.0.2"
   }
 }
