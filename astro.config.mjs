@@ -15,7 +15,7 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
-    ssr: {
+    resolve: {
       noExternal: ['lucide-svelte']
     }
   },
