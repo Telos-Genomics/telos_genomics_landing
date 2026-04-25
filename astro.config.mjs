@@ -10,13 +10,13 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'server',
   integrations: [svelte(), partytown()],
   adapter: netlify(),
-
   vite: {
     plugins: [tailwindcss()],
     resolve: {
-      noExternal: ['lucide-svelte']
+      noExternal: ['@lucide/svelte']
     }
   },
 });
