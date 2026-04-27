@@ -87,12 +87,12 @@
     >
       <section class="hero flex flex-col h-full my-8">
         <h1
-          class="mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
+          class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
         >
           Predictive Genomic
         </h1>
         <h1
-          class="mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
+          class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
         >
           Surveillance Engine
         </h1>
