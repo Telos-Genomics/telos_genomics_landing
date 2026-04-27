@@ -6,32 +6,7 @@
 
   let menuOpen = $state(false);
   let currentPath = $state("/");
-  let darkBackground = $state(true); // Hero oscuro visible al inicio
-
-  onMount(() => {
-    currentPath = window.location.pathname;
-
-    // Observar el hero — cuando sale del viewport, el fondo ya es claro
-    const hero = document.querySelector("#hero");
-    if (!hero) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        darkBackground = entry.isIntersecting;
-      },
-      {
-        // El hero "sale" cuando menos del 10% sigue visible
-        threshold: 0.1,
-      },
-    );
-
-    observer.observe(hero);
-    return () => observer.disconnect();
-  });
-
-  function toggleMenu() {
-    menuOpen = !menuOpen;
-  }
+  let darkBackground = $state(true);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -40,6 +15,66 @@
     { href: "#why_now", label: "Why now?" },
     { href: "#contact_us", label: "Contact us" },
   ];
+
+  onMount(() => {
+    // ── 1. Logo swap: hero oscuro vs resto claro ──────────────────────────
+    const hero = document.querySelector("#hero");
+    if (hero) {
+      const heroObs = new IntersectionObserver(
+        ([entry]) => {
+          darkBackground = entry.isIntersecting;
+        },
+        { threshold: 0.1 },
+      );
+      heroObs.observe(hero);
+    }
+
+    // ── 2. Active link: qué sección ocupa el viewport ────────────────────
+    // Mapeamos cada href de ancla a su elemento en el DOM.
+    // "/" se activa cuando ninguna sección está visible (top de página).
+    const sectionIds = navLinks
+      .filter((l) => l.href.startsWith("#"))
+      .map((l) => l.href.slice(1)); // quitar el #
+
+    const sectionEls = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+
+    // Threshold bajo para que se active en cuanto la sección
+    // ocupe al menos el 20% del viewport
+    const sectionObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            currentPath = `#${entry.target.id}`;
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      },
+    );
+
+    sectionEls.forEach((el) => sectionObs.observe(el));
+
+    // Scroll al top → activar Home
+    const topObs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) currentPath = "/";
+      },
+      { threshold: 0.5 },
+    );
+    if (hero) topObs.observe(hero);
+
+    return () => {
+      sectionObs.disconnect();
+      topObs.disconnect();
+    };
+  });
+
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+  }
 </script>
 
 <header class="fixed w-full z-50">
@@ -49,7 +84,7 @@
       ? 'bg-gray-900/10 border-gray-700'
       : 'bg-white/90 border-gray-200'}"
   >
-    <!-- Logo — cambia según el fondo -->
+    <!-- Logo -->
     <a href="/">
       <img
         src={darkBackground ? LogoWhite.src : Logo.src}
@@ -78,8 +113,9 @@
 
     <!-- Mobile hamburger -->
     <button
-      class="md:hidden transition-colors
-             {darkBackground ? 'text-gray-300' : 'text-gray-700'}"
+      class="md:hidden transition-colors {darkBackground
+        ? 'text-gray-300'
+        : 'text-gray-700'}"
       onclick={() => toggleMenu()}
       aria-label="Toggle menu"
     >
