@@ -11,7 +11,12 @@ import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  integrations: [svelte(), partytown()],
+  integrations: [svelte(), partytown({
+    config: {
+      // Reenvía llamadas de dataLayer y gtag al worker
+      forward: ['dataLayer.push', 'gtag']
+    },
+  })],
   adapter: netlify(),
   vite: {
     plugins: [tailwindcss()],
