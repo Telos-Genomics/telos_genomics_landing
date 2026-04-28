@@ -28,18 +28,19 @@ const { title = "Telos Genomics", excerpt, tags, canonicalUrl } = Astro.props;
         <script
             type="text/partytown"
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-46B2S0JHXT"
+            src="https://www.googletagmanager.com/gtag/js?id=G-0TZZLFP8XV"
         ></script></head
     >
     <!-- Google tag (gtag.js) -->
 
     <script type="text/partytown">
         window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag() {
+        function gtag() {
             dataLayer.push(arguments);
-        };
+        }
         gtag("js", new Date());
-        gtag("config", "G-46B2S0JHXT");
+
+        gtag("config", "G-0TZZLFP8XV");
     </script>
     <body>
         <Header client:load />
