@@ -289,10 +289,10 @@
             >Direct contact</span
           >
           <a
-            href="mailto:richard@telosgenomics.bio"
+            href="mailto:richard.armuelles@telosgenomics.bio"
             class="text-sm font-mono text-[#f5f3ee] hover:text-[#ef5b5b] transition-colors duration-200"
           >
-            richard@telosgenomics.bio
+            richard.armuelles@telosgenomics.bio
           </a>
         </div>
 
