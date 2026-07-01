@@ -8,6 +8,8 @@ import ContactUs from "../components/ContactUs.svelte";
 
 const canonicalUrl = "https://telosgenomics.bio";
 const excerpt = "";
+
+const emailTo = import.meta.env.EMAIL_TO;
 ---
 
 <Layout title="Telos Genomics" canonicalUrl={canonicalUrl} excerpt={excerpt}>
@@ -15,5 +17,5 @@ const excerpt = "";
 	<WhoIsItFor client:load />
 	<HowItWorks client:load />
 	<WhyNow client:only />
-	<ContactUs client:load />
+	<ContactUs client:load emailTo={emailTo} />
 </Layout>

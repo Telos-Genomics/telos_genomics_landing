@@ -10,6 +10,8 @@
   let isLoading = $state(false);
   let isSuccess = $state<boolean | null>(null);
 
+  let { emailTo } = $props();
+
   const SECTORES = [
     "Reinsurance / Insurance",
     "Supply Chain / Logistics",
@@ -289,10 +291,10 @@
             >Direct contact</span
           >
           <a
-            href="mailto:richard.armuelles@telosgenomics.bio"
+            href="mailto:{emailTo}"
             class="text-sm font-mono text-[#f5f3ee] hover:text-[#ef5b5b] transition-colors duration-200"
           >
-            richard.armuelles@telosgenomics.bio
+            {emailTo}
           </a>
         </div>
 
