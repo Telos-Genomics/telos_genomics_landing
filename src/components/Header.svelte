@@ -4,9 +4,15 @@
   import Logo from "../images/logo.svg";
   import LogoWhite from "../images/logo_white.svg";
 
+  // On subpages (labs, reinsurers, airlines) pass minimal: no Hero to
+  // observe, so the header stays light, and navlinks collapse to a
+  // single return link (desktop and mobile).
+  let { minimal = false } = $props();
+
   let menuOpen = $state(false);
   let currentPath = $state("/");
-  let darkBackground = $state(true);
+  // Subpages have no Hero: start (and stay) light. Index starts dark.
+  let darkBackground = $state(!minimal);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -17,6 +23,9 @@
   ];
 
   onMount(() => {
+    // Minimal header: no Hero exists, nothing to observe — stays light.
+    if (minimal) return;
+
     // ── 1. Logo swap: hero oscuro vs resto claro ──────────────────────────
     const hero = document.querySelector("#hero");
     if (hero) {
@@ -93,23 +102,32 @@
       />
     </a>
 
-    <!-- Desktop links -->
-    <ul class="hidden md:flex items-center space-x-6">
-      {#each navLinks as link}
-        <li>
-          <a
-            href={link.href}
-            class="transition-colors
-                   {darkBackground
-              ? 'text-gray-300 hover:text-blue-400'
-              : 'text-gray-700 hover:text-blue-600'}
-                   {currentPath === link.href ? 'underline font-bold' : ''}"
-          >
-            {link.label}
-          </a>
-        </li>
-      {/each}
-    </ul>
+    <!-- Desktop links (subpages: single return) -->
+    {#if minimal}
+      <a
+        href="/"
+        class="hidden md:block transition-colors text-gray-700 hover:text-blue-600"
+      >
+        ← Back to home
+      </a>
+    {:else}
+      <ul class="hidden md:flex items-center space-x-6">
+        {#each navLinks as link}
+          <li>
+            <a
+              href={link.href}
+              class="transition-colors
+                     {darkBackground
+                ? 'text-gray-300 hover:text-blue-400'
+                : 'text-gray-700 hover:text-blue-600'}
+                     {currentPath === link.href ? 'underline font-bold' : ''}"
+            >
+              {link.label}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    {/if}
 
     <!-- Mobile hamburger -->
     <button
@@ -123,7 +141,7 @@
     </button>
   </nav>
 
-  <!-- Mobile dropdown -->
+  <!-- Mobile dropdown (subpages: single return) -->
   {#if menuOpen}
     <ul
       class="md:hidden absolute top-full left-0 w-full backdrop-blur-sm border-t px-6 py-4 space-y-4 text-sm z-50
@@ -131,21 +149,33 @@
         ? 'bg-gray-900/90 border-gray-700'
         : 'bg-white/95 border-gray-200'}"
     >
-      {#each navLinks as link}
+      {#if minimal}
         <li>
           <a
-            href={link.href}
-            class="block transition-colors
-                   {darkBackground
-              ? 'text-gray-300 hover:text-blue-400'
-              : 'text-gray-700 hover:text-blue-600'}
-                   {currentPath === link.href ? 'underline font-bold' : ''}"
+            href="/"
+            class="block transition-colors text-gray-700 hover:text-blue-600"
             onclick={() => (menuOpen = false)}
           >
-            {link.label}
+            ← Back to home
           </a>
         </li>
-      {/each}
+      {:else}
+        {#each navLinks as link}
+          <li>
+            <a
+              href={link.href}
+              class="block transition-colors
+                     {darkBackground
+                ? 'text-gray-300 hover:text-blue-400'
+                : 'text-gray-700 hover:text-blue-600'}
+                     {currentPath === link.href ? 'underline font-bold' : ''}"
+              onclick={() => (menuOpen = false)}
+            >
+              {link.label}
+            </a>
+          </li>
+        {/each}
+      {/if}
     </ul>
   {/if}
 </header>

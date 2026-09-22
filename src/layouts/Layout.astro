@@ -4,7 +4,7 @@ import Header from "../components/Header.svelte";
 import Footer from "../components/Footer.svelte";
 
 // Recibe la prop 'title' desde la página que lo use
-const { title = "Telos Genomics", excerpt, tags, canonicalUrl } = Astro.props;
+const { title = "Telos Genomics", excerpt, tags, canonicalUrl, minimal = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -43,7 +43,7 @@ const { title = "Telos Genomics", excerpt, tags, canonicalUrl } = Astro.props;
         gtag("config", "G-0TZZLFP8XV");
     </script>
     <body>
-        <Header client:load />
+        <Header client:load minimal={minimal} />
         <slot />
         <Footer />
     </body>

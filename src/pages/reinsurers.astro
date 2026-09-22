@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import OnePager from "../components/OnePager.astro";
+import ContactUs from "../components/ContactUs.svelte";
+
+const emailTo = import.meta.env.EMAIL_TO;
+---
+
+<Layout
+  title="Telos-S for Reinsurers"
+  canonicalUrl="https://telosgenomics.bio/reinsurers"
+  minimal
+  excerpt="Variant-level structural risk signal for pandemic loss exposure monitoring. Pre-registered predictions, symmetric benchmarks, exploratory status disclosed."
+  tags="reinsurance, pandemic risk, genomic surveillance, Telos-S"
+>
+  <OnePager
+    eyebrow="For life & health reinsurers"
+    title="A structural risk signal for pandemic loss exposure."
+    lede="Variant-level structural risk quantified from primary sequence within days of public release — an input for exposure monitoring, not a loss predictor. Every prediction pre-registered with a timestamp; every comparison symmetric."
+    deliverables={[
+      {
+        title: "Scores days after deposition",
+        text: "XFG.5.1.7 was flagged at 2280.5 five days after its GenBank release, before lineage characterization caught up — primary-sequence risk assessment inside the classification blind window.",
+      },
+      {
+        title: "Pre-registered predictions",
+        text: "A prospective registry seals each forecast with a server timestamp and a frozen-config hash before outcomes are observed. Auditable by design, cherry-picking by construction impossible.",
+      },
+      {
+        title: "Symmetric benchmarks",
+        text: "Same isolates, same outcomes, same rank metric against supervised fitness models — wins and losses reported alike under a published protocol.",
+      },
+      {
+        title: "Frozen demo analyses",
+        text: "JN.1, KP.3.1.1 and XBB.1.5 packs with full provenance (accession, job, config hash, integrity manifest), explorable without our infrastructure.",
+      },
+    ]}
+    honesty={[
+      "No validated lead-time claim: any weeks-of-anticipation figure is the hypothesis under test, not a result.",
+      "Scores proxy structural destabilization — not hospitalization, mortality, or claims.",
+      "Pipeline constants are heuristic; geospatial projections are exploratory and excluded from validation.",
+    ]}
+    pilotIntro="Four weeks against your own timelines: our scores, your excess-mortality and claims data, your definitions."
+    pilot={[
+      {
+        week: "W1",
+        title: "Historical panel",
+        text: "We score an agreed set of historical variants; you hold the outcome timelines.",
+      },
+      {
+        week: "W2",
+        title: "Joint analysis",
+        text: "Score trajectories versus your excess-mortality and claims data — computed together, with your outcome definitions.",
+      },
+      {
+        week: "W3",
+        title: "Prospective watchlist",
+        text: "New deposits scored and sealed as they release; no peeking, full registry discipline.",
+      },
+      {
+        week: "W4",
+        title: "Readout",
+        text: "Rank correlation, hits and misses, and a decision on standing exposure monitoring.",
+      },
+    ]}
+    resourcesNote="Publication (Zenodo DOI 10.5281/zenodo.21381358) · software under MIT (telos-s-backend, telos-s-frontend, telos-s-deploy). Frozen demo analyses available on request."
+  />
+  <ContactUs client:load emailTo={emailTo} initialSector="Reinsurance / Insurance" />
+</Layout>

@@ -1,16 +1,16 @@
 <script lang="ts">
+  let { emailTo, initialSector = "" } = $props();
+
   // Campos adaptados al contexto B2B de Telos Genomics
   let nombre = $state("");
   let empresa = $state("");
   let email = $state("");
-  let sector = $state("");
+  let sector = $state(initialSector);
   let mensaje = $state("");
 
   let statusMessage = $state("");
   let isLoading = $state(false);
   let isSuccess = $state<boolean | null>(null);
-
-  let { emailTo } = $props();
 
   const SECTORES = [
     "Reinsurance / Insurance",

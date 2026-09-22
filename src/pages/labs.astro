@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+import OnePager from "../components/OnePager.astro";
+import ContactUs from "../components/ContactUs.svelte";
+
+const emailTo = import.meta.env.EMAIL_TO;
+---
+
+<Layout
+  title="Telos-S for Laboratories"
+  canonicalUrl="https://telosgenomics.bio/labs"
+  minimal
+  excerpt="Zero-shot structural risk scoring and mutation forecasting for sequencing laboratories. Retrospective validation published; prospective evaluation underway."
+  tags="genomic surveillance, SARS-CoV-2, ESM-2, variant analysis, Telos-S"
+>
+  <OnePager
+    eyebrow="For laboratories & pharma"
+    title="See the next mutation before it circulates."
+    lede="Telos-S scores structural risk at functionally weighted spike positions and forecasts likely substitutions — from primary sequence alone, with no lineage dictionary required. Built for regional laboratories that sequence first and wait for formal characterization later."
+    deliverables={[
+      {
+        title: "Sequencing QC you can defend",
+        text: "Every mutation classified Trusted, Suspicious (±5 residues of ambiguity) or Invalid, with an overall quality ratio. Suspect data is shown on the heatmap but never scored — conservative by construction.",
+      },
+      {
+        title: "Aggression Score with reference points",
+        text: "Composite structural risk over trusted mutations, zone-weighted (RBM 3.0×, RBD 2.0×, Furin 1.5×). Published reference points: Delta 210.6, Omicron BA.1 1074.4, XFG.5.1.7 2280.5.",
+      },
+      {
+        title: "Prophet forecasts at 4 functional sites",
+        text: "In-silico deep mutational scan at RBM-452, RBM-484, RBM-501 and Furin-681: top-5 structural transition probabilities per site, ALERT above 20%, withheld entirely near low-quality sequencing.",
+      },
+      {
+        title: "Lineage call with confidence",
+        text: "Signature matching with match percentage — and explicit nearest-match reporting when no dedicated signature exists, as happened with BF.11.3 and XFG.5.1.7.",
+      },
+    ]}
+    honesty={[
+      "Retrospective consistency only so far; prospective validation is underway, not complete.",
+      "Zone weights, scaling constants and the 20% alert threshold are heuristic, not fitted — calibration in progress.",
+      "The score measures structural destabilization, not immune escape or transmissibility directly.",
+      "Lineage dictionaries are incomplete; calls below ~80% are nearest-match, not classification.",
+    ]}
+    pilotIntro="Four weeks, your sequences, our pipeline running shadow beside your current workflow."
+    pilot={[
+      {
+        week: "W1",
+        title: "Connect",
+        text: "You share 10–20 historical GenBank FASTAs with known trajectories. We run the full pipeline and return scores, QC and forecasts.",
+      },
+      {
+        week: "W2",
+        title: "Baseline",
+        text: "Scores versus your known outcomes, side by side — plus a QC audit of your sequencing quality profile.",
+      },
+      {
+        week: "W3",
+        title: "Live shadow",
+        text: "New deposits scored within days of release; predictions sealed with timestamps before outcomes are known.",
+      },
+      {
+        week: "W4",
+        title: "Readout",
+        text: "Retrospective correlation, prospective hits and misses, and a go/no-go decision on a standing variant watchlist.",
+      },
+    ]}
+    resourcesNote="Publication (Zenodo DOI 10.5281/zenodo.21381358) · software under MIT (telos-s-backend, telos-s-frontend, telos-s-deploy). Frozen demo analyses available on request."
+  />
+  <ContactUs client:load emailTo={emailTo} initialSector="Laboratories / Pharma" />
+</Layout>

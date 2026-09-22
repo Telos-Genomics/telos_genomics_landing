@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import OnePager from "../components/OnePager.astro";
+import ContactUs from "../components/ContactUs.svelte";
+
+const emailTo = import.meta.env.EMAIL_TO;
+---
+
+<Layout
+  title="Telos-S for Airlines"
+  canonicalUrl="https://telosgenomics.bio/airlines"
+  minimal
+  excerpt="Variant packs and illustrative route scenarios over 279 airports, 78 with direct service to Tocumen. Assumptions on screen, exploratory status disclosed."
+  tags="aviation, route risk, Tocumen, genomic surveillance, Telos-S"
+>
+  <OnePager
+    eyebrow="For airlines & route risk"
+    title="Know the variant before the route becomes the vector."
+    lede="Variant packs plus a scenario explorer covering 279 airports — 78 with direct service to Tocumen — each with nearby crowd foci. Compare illustrative scenarios per origin, with every assumption on screen."
+    deliverables={[
+      {
+        title: "Variant packs in days",
+        text: "Aggression Score, lineage call and Prophet forecast per isolate shortly after public release — the same packs our demo explores, frozen with provenance.",
+      },
+      {
+        title: "279-airport explorer, 78 direct to Tocumen",
+        text: "Curated snapshot of scheduled direct service to PTY (source and date recorded), with a direct-only filter — so entry-point scenarios start from plausible origins.",
+      },
+      {
+        title: "Scenarios with assumptions visible",
+        text: "An illustrative spread model where every number sits next to its formula and an exploratory badge. Built for discussion in continuity planning, not for operations.",
+      },
+      {
+        title: "Crowd foci per airport",
+        text: "Two high-repercussion nearby points per airport — plazas, malls, stadiums, beaches — distance-checked during curation, so scenarios play out where people actually gather.",
+      },
+    ]}
+    honesty={[
+      "The spread model is illustrative and uncalibrated; circle sizes are visual aids, not case counts.",
+      "No traffic volumes, frequencies or live schedules — a dated snapshot, not an operations feed.",
+      "Scenarios inform discussion, never routing or capacity decisions.",
+    ]}
+    pilotIntro="Four weeks with your network people: your hubs mapped onto the explorer, scenarios walked through with your continuity team."
+    pilot={[
+      {
+        week: "W1",
+        title: "Your network",
+        text: "We map your hub and focus-city network onto the explorer, including direct-service flags for your routes.",
+      },
+      {
+        week: "W2",
+        title: "Scenario walkthrough",
+        text: "Joint session with your operations and continuity teams over live variant packs and origin scenarios.",
+      },
+      {
+        week: "W3",
+        title: "Route watchlist",
+        text: "Four-week watch on new deposits relevant to your route map, sealed predictions included.",
+      },
+      {
+        week: "W4",
+        title: "Readout",
+        text: "What the watchlist caught, what it missed, and whether standing monitoring earns its keep.",
+      },
+    ]}
+    resourcesNote="Publication (Zenodo DOI 10.5281/zenodo.21381358) · software under MIT (telos-s-backend, telos-s-frontend, telos-s-deploy). Frozen demo analyses available on request."
+  />
+  <ContactUs client:load emailTo={emailTo} initialSector="Airlines / Aviation" />
+</Layout>
