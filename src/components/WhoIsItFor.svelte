@@ -7,7 +7,7 @@
       title: "Life & Health Reinsurers",
       short: "Anticipate pandemic loss spikes before they appear in claims.",
       detail:
-        "COVID-19 generated over $72B in insured life and health losses globally. Those losses were priced after the fact. Telos-S gives you the structural risk profile of an emerging variant 3–6 weeks before hospitalization curves move — enough time to adjust underwriting conditions, reassess reserves, or trigger treaty clauses.",
+        "COVID-19 cost global insurers over $203B — $107B in claims plus $96B in investment losses (Lloyd's of London), almost all of it priced after the fact. Telos-S flags the structural risk profile of an emerging variant within days of its GenBank release — XFG.5.1.7 scored 2280.5 five days post-release — while lineage characterization is still pending. Whether that head start converts into clinical lead time is now under prospective test.",
       tag: "Reinsurance",
     },
     {
@@ -16,7 +16,7 @@
       short:
         "Identify viral risk in critical logistics nodes before disruption.",
       detail:
-        "The 2021–2022 supply chain collapse cost the global economy an estimated $4T. Viral outbreaks at port cities and manufacturing hubs were a primary driver. Telos-S flags structural risk at origin before absenteeism and lockdowns cascade into your network.",
+        "The pandemic's global macro impact is estimated by the IMF at $13.8 trillion, with viral outbreaks at port cities and manufacturing hubs cascading into networks. Telos-S flags structural risk at origin within days of sequence deposition — before absenteeism and lockdowns cascade.",
       tag: "Logistics",
     },
     {
@@ -24,7 +24,7 @@
       title: "Airlines & Route Risk",
       short: "Monitor variant aggressiveness across high-connectivity routes.",
       detail:
-        "Every major variant entered new continents through a small number of hub airports — Dubai, Frankfurt, Tocumen, Changi. Telos-S integrates with 200+ international airports and 400+ high-density urban points. You see the risk profile before the route becomes the vector.",
+        "Every major variant entered new continents through a small number of hub airports — Dubai, Frankfurt, Tocumen, Changi. Telos-S explores 279 airports — 78 with direct service to Tocumen — each with nearby crowd foci. You see the risk profile while the route is still becoming the vector.",
       tag: "Aviation",
     },
     {
@@ -41,7 +41,7 @@
       title: "Investment & Sovereign Risk Funds",
       short: "Epidemiological intelligence as input for systemic risk models.",
       detail:
-        "Pandemic-sensitive sectors — aviation, hospitality, consumer discretionary, healthcare — move ahead of official WHO declarations. Telos-S provides a quantitative signal that feeds directly into portfolio risk models, giving fund managers a 3–6 week lead on sector reallocation decisions.",
+        "Pandemic-sensitive sectors — aviation, hospitality, consumer discretionary, healthcare — move ahead of official WHO declarations. Telos-S provides a structural risk signal available within days of sequence deposition, ahead of formal lineage designation, as an input to portfolio risk models. Its clinical lead time is the hypothesis now under prospective test.",
       tag: "Finance",
     },
   ];

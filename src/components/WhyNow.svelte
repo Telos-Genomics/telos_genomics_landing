@@ -16,8 +16,8 @@
   const SLIDES = [
     {
       tag: "THE COST OF REACTING LATE",
-      stat: "$72B",
-      statSub: "in insured life and health losses.",
+      stat: "$203B",
+      statSub: "in insurer costs — claims plus investments (Lloyd's).",
       context: "COVID-19. 2020–2021. Priced after the fact.",
       body: "Every significant variant caused measurable economic damage before the market could respond. Reinsurers adjusted premiums after the wave. Supply chains broke before rerouting. Airlines grounded fleets after spread was confirmed.",
       bg: "#f5f3ee",
@@ -35,10 +35,10 @@
     },
     {
       tag: "YOUR WINDOW",
-      stat: "3–6 weeks.",
-      statSub: "of advance signal before clinical impact.",
+      stat: "Days, not months.",
+      statSub: "from public deposit to scored risk.",
       context: "Telos-S operates in the gap.",
-      body: "That window is enough time to adjust underwriting conditions, reassess reserves, trigger treaty clauses, reroute logistics, or reposition a portfolio. The genomic signal is already public. The question is whether you're reading it.",
+      body: "Telos-S scores new deposits within days of release — inside the window where lineage characterization is still pending. That head start is where underwriting, reserves, logistics and portfolios can move first. Whether it translates into clinical lead time is now under prospective test.",
       bg: "#0a0a0a",
       textDark: false,
       window: true,
@@ -273,6 +273,9 @@
                 </div>
               {/each}
             </div>
+            <span class="text-[0.5rem] font-mono text-[#999]">
+              Illustrative timeline — validated cases in the publication.
+            </span>
           {/if}
 
           <!-- Ventana visual — solo slide 2 -->

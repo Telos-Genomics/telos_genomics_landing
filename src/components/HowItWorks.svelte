@@ -108,16 +108,16 @@
     return ZONE_COLORS[mut.zone] ?? "#4b5563";
   }
 
+  // Illustrative demo math mirrors the paper formula Σ|c1·ω + c2·ζ|
+  // (§2.4.1: c1=20, c2=10, signed LLR, abs on the combined term).
+  const C1 = 20;
+  const C2 = 10;
+  const ZONE_W = { rbm: 3.0, rbd: 2.0, furin: 1.5, body: 1.0 };
+
   const SCORE = Math.round(
-    MUTATIONS.filter((m) => m.llr > 0).reduce((acc, m) => {
-      const w = m.critical
-        ? 3
-        : m.zone === "rbm"
-          ? 2
-          : m.zone === "furin"
-            ? 1.5
-            : 1;
-      return acc + Math.abs(m.llr) * w * 20;
+    MUTATIONS.reduce((acc, m) => {
+      const w = ZONE_W[m.zone] ?? 1;
+      return acc + Math.abs(C1 * w + C2 * m.llr);
     }, 0),
   );
 
@@ -135,19 +135,19 @@
     { type: "label", text: "Sequences     12 · deposited 4d ago" },
     { type: "divider", text: "─────────────────────────────────" },
     { type: "score", text: "Aggression    2281 ██████████" },
-    { type: "alert", text: "Verdict       ⚠ ALERTA MÁXIMA" },
+    { type: "alert", text: "Verdict       ⚠ MAXIMUM ALERT" },
     { type: "divider", text: "─────────────────────────────────" },
     { type: "label", text: "Critical mutations:" },
     { type: "critical", text: "  L452R  pos 452  LLR +3.8  RBM" },
     { type: "critical", text: "  E484A  pos 484  LLR +4.1  RBM" },
     { type: "critical", text: "  N501Y  pos 501  LLR +3.2  RBM" },
-    { type: "critical", text: "  H681R  pos 681  LLR +5.2  FCS" },
+    { type: "critical", text: "  P681H  pos 681  LLR +5.2  FCS" },
     { type: "divider", text: "─────────────────────────────────" },
     { type: "label", text: "Prophet predictions:" },
     { type: "prophet", text: "  pos 452 → G  8.7% structural" },
     { type: "prophet", text: "  pos 681 → K  6.2% structural" },
     { type: "divider", text: "─────────────────────────────────" },
-    { type: "label", text: "Lead time     ~3–6 weeks" },
+    { type: "label", text: "Lead time     scored within days" },
     { type: "alert", text: "Status        MONITOR ACTIVE" },
   ];
 
@@ -385,7 +385,7 @@
                   ? '#ef5b5b'
                   : '#1a1a1a'};transition:color 0.8s ease 0.6s;"
               >
-                ALERTA MÁXIMA
+                MAXIMUM ALERT
               </span>
               <span class="text-[0.55rem] font-mono text-[#555]"
                 >threshold &gt; 1200</span
@@ -395,7 +395,7 @@
         </div>
 
         <div class="flex gap-6">
-          {#each [{ key: "rbm", label: "RBM", weight: "×2", color: "#10b981" }, { key: "furin", label: "Furin", weight: "×1.5", color: "#f59e0b" }, { key: "rbd", label: "RBD", weight: "×1", color: "#3b82f6" }, { key: "body", label: "Other", weight: "×1", color: "#4b5563" }] as zone}
+          {#each [{ key: "rbm", label: "RBM", weight: "×3", color: "#10b981" }, { key: "furin", label: "Furin", weight: "×1.5", color: "#f59e0b" }, { key: "rbd", label: "RBD", weight: "×2", color: "#3b82f6" }, { key: "body", label: "Other", weight: "×1", color: "#4b5563" }] as zone}
             {@const count = MUTATIONS.filter((m) => m.zone === zone.key).length}
             <div class="flex flex-col gap-1">
               <span class="text-[0.6rem] font-mono" style="color:{zone.color}"
@@ -447,7 +447,7 @@
         {/each}
         <span class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-[#ef5b5b]"></span>
-          <span class="text-[#555]">Critical · weighted ×3</span>
+          <span class="text-[#555]">Prophet sites · forecasted, not weighted</span>
         </span>
       </div>
 
@@ -591,8 +591,8 @@
           The signal reaches you.
         </h2>
         <p class="md:ml-auto text-sm text-[#555] max-w-xs leading-relaxed">
-          Structured report. Mutation map. Contagion simulation. Weeks before
-          the clinical picture forms.
+          Structured report. Mutation map. Scenario explorer (illustrative).
+          While the clinical picture is still forming.
         </p>
       </div>
 
@@ -614,7 +614,7 @@
             ></span>
             <span
               class="ml-3 text-[0.55rem] font-mono text-[#555] tracking-widest"
-              >telos-s · output</span
+              >telos-s · illustrative output</span
             >
           </div>
 
@@ -668,7 +668,7 @@
           <div
             class="text-[0.55rem] font-mono text-[#555] tracking-widest uppercase mb-2"
           >
-            contagion simulation · PTY / Ciudad de Panamá
+            scenario explorer (illustrative) · PTY / Ciudad de Panamá
           </div>
           <div
             class="bg-[#0f0f0f] border border-[#1e1e1e] rounded-sm overflow-hidden"
