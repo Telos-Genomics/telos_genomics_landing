@@ -89,12 +89,7 @@
         <h1
           class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
         >
-          Structural genomic intelligence
-        </h1>
-        <h1
-          class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
-        >
-          without waiting for lineage classification.
+          Structural Genomic Surveillance Engine
         </h1>
         <p
           class="mb-4 mt-10 font-light text-gray-300 text-center lg:mb-4 md:text-lg lg:text-2xl sm:px-0 lg:px-0 xl:px-0"
