@@ -10,13 +10,13 @@ const emailTo = import.meta.env.EMAIL_TO;
   title="Telos-S for Reinsurers"
   canonicalUrl="https://telosgenomics.bio/reinsurers"
   minimal
-  excerpt="Variant-level structural risk signal for pandemic loss exposure monitoring. Registry-recorded decisions, symmetric benchmarks, exploratory status disclosed."
+  excerpt="Variant-level structural risk signal for pandemic loss exposure monitoring. Registry-recorded decisions, quality controls, exploratory status disclosed."
   tags="reinsurance, pandemic risk, genomic surveillance, Telos-S"
 >
   <OnePager
     eyebrow="For life & health reinsurers"
     title="A structural risk signal for pandemic loss exposure."
-    lede="Variant-level structural risk quantified from primary sequence once its FASTA is available — an input for exposure monitoring, not a loss predictor. Selected analysis-linked decisions and their evidence can be recorded in a hash-linked registry before outcomes are observed; comparisons follow a published protocol."
+    lede="Variant-level structural risk quantified from primary sequence once its FASTA is available — an input for exposure monitoring, not a loss predictor. Selected analysis-linked decisions and their evidence can be recorded in a hash-linked registry before outcomes are observed."
     deliverables={[
       {
         title: "Scores from primary sequence",
@@ -27,8 +27,8 @@ const emailTo = import.meta.env.EMAIL_TO;
         text: "A prospective registry can record selected analysis-linked decisions with a server-generated UTC timestamp, a configuration hash and an evidence snapshot before outcomes are observed. The hash chain provides tamper-evidence for recorded entries; it does not by itself prevent excluding entries before recording, editing and recalculating the chain, or selecting which sequences to analyze.",
       },
       {
-        title: "Symmetric benchmarks",
-        text: "Same isolates, same outcomes and a shared rank metric against reference models (supervised fitness and immune-escape) — results reported under a published protocol, including negative deltas where observed.",
+        title: "Quality-controlled structural analysis",
+        text: "Mutation-level QC separates Trusted, Suspicious and Invalid inputs; suspicious data remains visible but is not scored. A recorded configuration hash supports retrospective review and reproducibility of the recorded analysis.",
       },
       {
         title: "Frozen demo analyses",
@@ -36,7 +36,7 @@ const emailTo = import.meta.env.EMAIL_TO;
       },
     ]}
     honesty={[
-      "No validated lead-time claim: any weeks-of-anticipation figure is the hypothesis under test, not a result.",
+      "No validated lead-time claim: any weeks-of-anticipation figure is an open question, not a result.",
       "Scores proxy structural destabilization — not hospitalization, mortality, or claims.",
       "Pipeline constants are heuristic; geospatial projections are exploratory and excluded from validation.",
     ]}
@@ -60,7 +60,7 @@ const emailTo = import.meta.env.EMAIL_TO;
       {
         week: "W4",
         title: "Readout",
-        text: "Rank correlation, hits and misses, and a decision on a recurring exposure watchlist.",
+        text: "A readout of retrospective agreement, observed limitations, and a decision on a recurring exposure watchlist.",
       },
     ]}
     resourcesNote="Publication (Zenodo DOI 10.5281/zenodo.21381359) · software under MIT (telos-s-backend, telos-s-frontend, telos-s-deploy). Frozen demo analyses available on request."

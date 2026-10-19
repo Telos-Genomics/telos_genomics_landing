@@ -7,7 +7,7 @@
       title: "Life & Health Reinsurers",
       short: "Explore pandemic loss exposure before it reaches claims.",
       detail:
-        "COVID-19 cost global insurers over $203B — $107B in claims plus $96B in investment losses (Lloyd's of London), almost all of it priced after the fact. Telos-S can score a newly deposited sequence without waiting for lineage characterization; in a documented retrospective case, XFG.5.1.7 was scored 2280.5 five days after its GenBank release. Whether that head start converts into clinical lead time is under prospective test.",
+        "COVID-19 cost global insurers over $203B — $107B in claims plus $96B in investment losses (Lloyd's of London), almost all of it priced after the fact. Telos-S can score a newly deposited sequence without waiting for lineage characterization; in a documented retrospective case, XFG.5.1.7 was scored 2280.5 five days after its GenBank release. Whether that head start converts into clinical lead time remains an open question.",
       tag: "Reinsurance",
     },
     {
@@ -22,9 +22,9 @@
     {
       num: "03",
       title: "Airlines & Route Risk",
-      short: "Monitor structural risk signals across high-connectivity routes.",
+      short: "Explore structural signals across connected aviation networks.",
       detail:
-        "Many major variants have entered new continents through a small number of hub airports — Dubai, Frankfurt, Tocumen, Changi. The explorer covers 279 entry-point airports, including a dated snapshot of 78 destinations with direct Copa service to Tocumen, each with nearby crowd foci (Haversine approximations, not traffic volumes). Explore illustrative entry-point scenarios; the spread model is not a calibrated epidemiological forecast.",
+        "Telos-S combines variant analysis with an interactive explorer of airport connections and nearby points of interest, helping aviation teams examine hypothetical exposure scenarios and continuity-planning questions.",
       tag: "Aviation",
     },
     {
@@ -41,7 +41,7 @@
       title: "Investment & Sovereign Risk Funds",
       short: "Experimental structural intelligence as one input for systemic risk models.",
       detail:
-        "Pandemic-sensitive sectors — aviation, hospitality, consumer discretionary, healthcare — can reprice before official WHO declarations. Telos-S provides an experimental structural signal from primary sequence, without waiting for formal lineage designation, as one input to portfolio risk models. Its clinical lead time is the hypothesis under prospective test.",
+        "Pandemic-sensitive sectors — aviation, hospitality, consumer discretionary, healthcare — can reprice before official WHO declarations. Telos-S provides an experimental structural signal from primary sequence, without waiting for formal lineage designation, as one input to portfolio risk models. Its clinical lead time remains an open question.",
       tag: "Finance",
     },
   ];

@@ -89,20 +89,19 @@
         <h1
           class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
         >
-          Structural Genomic
+          Structural genomic intelligence
         </h1>
         <h1
           class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
         >
-          Surveillance Engine
+          without waiting for lineage classification.
         </h1>
         <p
           class="mb-4 mt-10 font-light text-gray-300 text-center lg:mb-4 md:text-lg lg:text-2xl sm:px-0 lg:px-0 xl:px-0"
         >
-          Telos Genomics turns primary spike sequences into experimental
-          structural risk signals — without waiting for a formal lineage
-          classification. Analysis time is separate from the time since
-          deposition; clinical and operational lead time are not established.
+          Telos-S analyzes user-provided FASTA sequences to generate structural
+          scores, quality assessments and exploratory evolutionary insights —
+          helping teams investigate emerging variants sooner.
         </p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Button

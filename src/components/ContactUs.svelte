@@ -99,9 +99,9 @@
         </h2>
       </div>
       <p class="text-sm text-[#555] max-w-sm leading-relaxed md:mb-2">
-        We're working with select partners on scoped pilot programs. Tell us
-        about your organization and we'll follow up to discuss fit, scope and
-        next steps.
+        We're working with select partners on scoped pilots using their
+        sequences and workflows. Tell us about your organization and we'll
+        follow up to discuss fit, scope and next steps.
       </p>
     </div>
 

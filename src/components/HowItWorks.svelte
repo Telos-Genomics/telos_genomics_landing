@@ -148,7 +148,7 @@
     { type: "prophet", text: "  pos 681 → K  6.2% model score" },
     { type: "divider", text: "─────────────────────────────────" },
     { type: "label", text: "Signal        from FASTA; lead time n/e" },
-    { type: "alert", text: "Status        MONITOR ACTIVE" },
+    { type: "alert", text: "Status        AWAITING HUMAN REVIEW" },
   ];
 
   let frame3Revealed = $state(false);

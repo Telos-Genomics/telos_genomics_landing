@@ -36,9 +36,9 @@
     {
       tag: "YOUR WINDOW",
       stat: "Days, not months.",
-      statSub: "from FASTA to structural risk score.",
+      statSub: "From available FASTA to structural analysis — without waiting for formal lineage classification.",
       context: "Telos-S operates in the gap.",
-      body: "Telos-S scores a sequence from its FASTA without waiting for lineage characterization. Analysis time is separate from the time since deposition; the time since deposition depends on when the sequence is provided. That gap is where underwriting, reserves, logistics and portfolios can review exposure. Whether it translates into clinical lead time is under prospective test.",
+      body: "Telos-S scores a sequence from its FASTA without waiting for lineage characterization. Analysis time is separate from the time since deposition; the time since deposition depends on when the sequence is provided. That gap is where underwriting, reserves, logistics and portfolios can review exposure. Whether it translates into clinical lead time remains an open question.",
       bg: "#0a0a0a",
       textDark: false,
       window: true,

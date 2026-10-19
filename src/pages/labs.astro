@@ -10,12 +10,12 @@ const emailTo = import.meta.env.EMAIL_TO;
   title="Telos-S for Laboratories"
   canonicalUrl="https://telosgenomics.bio/labs"
   minimal
-  excerpt="Zero-shot structural risk scoring and experimental candidate-substitution generation for sequencing laboratories. Retrospective consistency published; prospective evaluation underway."
+  excerpt="Zero-shot structural risk scoring and experimental candidate-substitution generation for sequencing laboratories. Retrospective computational findings documented; independent prospective validation remains an open objective."
   tags="genomic surveillance, SARS-CoV-2, ESM-2, variant analysis, Telos-S"
 >
   <OnePager
     eyebrow="For laboratories & pharma"
-    title="Explore candidate mutations before they circulate."
+    title="Explore possible evolutionary pathways beyond known lineages."
     lede="Telos-S scores structural risk at functionally weighted spike positions and generates model-derived substitution candidates — from primary sequence alone, with no lineage dictionary required. Built for regional laboratories that sequence first and wait for formal characterization later."
     deliverables={[
       {
@@ -28,7 +28,7 @@ const emailTo = import.meta.env.EMAIL_TO;
       },
       {
         title: "Prophet candidates at 4 functional sites",
-        text: "In-silico masked-language-model scan at RBM-452, RBM-484, RBM-501 and Furin-681: top-5 model-derived candidate residues per site with a heuristic alert threshold, withheld near low-quality sequencing. These are exploratory hypotheses, not calibrated probabilities of future evolution.",
+        text: "In-silico masked-language-model scan at RBM-452, RBM-484, RBM-501 and Furin-681: top-5 model-derived candidate residues per site with a heuristic 20% alert threshold, withheld near low-quality sequencing. These are exploratory hypotheses, not calibrated probabilities of future evolution.",
       },
       {
         title: "Lineage call with confidence",
@@ -36,8 +36,8 @@ const emailTo = import.meta.env.EMAIL_TO;
       },
     ]}
     honesty={[
-      "Retrospective consistency only so far; prospective validation is underway, not complete.",
-      "Zone weights, scaling constants and the 20% alert threshold are heuristic, not fitted — calibration in progress.",
+      "Retrospective computational findings documented; independent prospective validation remains an open objective.",
+      "Zone weights, scaling constants and the 20% alert threshold are heuristic, not fitted; calibration remains an open objective.",
       "The score measures structural destabilization, not immune escape or transmissibility directly.",
       "Lineage dictionaries are incomplete; calls below ~80% are nearest-match, not classification.",
     ]}
@@ -61,7 +61,7 @@ const emailTo = import.meta.env.EMAIL_TO;
       {
         week: "W4",
         title: "Readout",
-        text: "Retrospective correlation, prospective hits and misses, and a go/no-go decision on a standing variant watchlist.",
+        text: "Retrospective correlation, any prospective observations from the pilot window, and a go/no-go decision on a recurring variant watchlist.",
       },
     ]}
     resourcesNote="Publication (Zenodo DOI 10.5281/zenodo.21381359) · software under MIT (telos-s-backend, telos-s-frontend, telos-s-deploy). Frozen demo analyses available on request."
