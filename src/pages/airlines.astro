@@ -10,21 +10,21 @@ const emailTo = import.meta.env.EMAIL_TO;
   title="Telos-S for Airlines"
   canonicalUrl="https://telosgenomics.bio/airlines"
   minimal
-  excerpt="Variant packs and illustrative route scenarios over 279 airports, 78 with direct service to Tocumen. Assumptions on screen, exploratory status disclosed."
+  excerpt="Variant packs and illustrative route scenarios over a 279-airport entry-point set, with a dated 78-destination Copa/PTY direct-service snapshot. Assumptions on screen, exploratory status disclosed."
   tags="aviation, route risk, Tocumen, genomic surveillance, Telos-S"
 >
   <OnePager
     eyebrow="For airlines & route risk"
     title="Know the variant before the route becomes the vector."
-    lede="Variant packs plus a scenario explorer covering 279 airports — 78 with direct service to Tocumen — each with nearby crowd foci. Compare illustrative scenarios per origin, with every assumption on screen."
+    lede="Variant packs plus a scenario explorer covering 279 entry-point airports — including a dated snapshot of 78 destinations with direct Copa service to Tocumen — each with nearby crowd foci. Compare illustrative scenarios per origin, with every assumption on screen."
     deliverables={[
       {
-        title: "Variant packs in days",
-        text: "Aggression Score, lineage call and Prophet forecast per isolate shortly after public release — the same packs our demo explores, frozen with provenance.",
+        title: "Variant packs from FASTA",
+        text: "Aggression Score, lineage call and Prophet candidates per isolate once its FASTA is analyzed — the same packs our demo explores, frozen with provenance.",
       },
       {
-        title: "279-airport explorer, 78 direct to Tocumen",
-        text: "Curated snapshot of scheduled direct service to PTY (source and date recorded), with a direct-only filter — so entry-point scenarios start from plausible origins.",
+        title: "279-airport explorer, 78 direct Copa destinations",
+        text: "A dated snapshot of 78 destinations with scheduled direct Copa service to PTY (source and date recorded), plus a direct-only filter — so entry-point scenarios start from plausible origins.",
       },
       {
         title: "Scenarios with assumptions visible",
@@ -32,7 +32,7 @@ const emailTo = import.meta.env.EMAIL_TO;
       },
       {
         title: "Crowd foci per airport",
-        text: "Two high-repercussion nearby points per airport — plazas, malls, stadiums, beaches — distance-checked during curation, so scenarios play out where people actually gather.",
+        text: "Two high-repercussion nearby points per airport — plazas, malls, stadiums, beaches — distance-checked with Haversine approximations during curation, so scenarios play out where people actually gather.",
       },
     ]}
     honesty={[
@@ -55,15 +55,15 @@ const emailTo = import.meta.env.EMAIL_TO;
       {
         week: "W3",
         title: "Route watchlist",
-        text: "Four-week watch on new deposits relevant to your route map, sealed predictions included.",
+        text: "A four-week watchlist of newly available sequences relevant to your route map, with candidate substitutions and registry records where applicable.",
       },
       {
         week: "W4",
         title: "Readout",
-        text: "What the watchlist caught, what it missed, and whether standing monitoring earns its keep.",
+        text: "What the watchlist caught, what it missed, and whether a recurring watchlist earns its keep.",
       },
     ]}
-    resourcesNote="Publication (Zenodo DOI 10.5281/zenodo.21381358) · software under MIT (telos-s-backend, telos-s-frontend, telos-s-deploy). Frozen demo analyses available on request."
+    resourcesNote="Publication (Zenodo DOI 10.5281/zenodo.21381359) · software under MIT (telos-s-backend, telos-s-frontend, telos-s-deploy). Frozen demo analyses available on request."
   />
   <ContactUs client:load emailTo={emailTo} initialSector="Airlines / Aviation" />
 </Layout>

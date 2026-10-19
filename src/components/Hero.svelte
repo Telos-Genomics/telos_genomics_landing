@@ -99,8 +99,10 @@
         <p
           class="mb-4 mt-10 font-light text-gray-300 text-center lg:mb-4 md:text-lg lg:text-2xl sm:px-0 lg:px-0 xl:px-0"
         >
-          Telos Genomics transforms genomic sequences into early structural
-          risk signals — within days of public sequence deposition.
+          Telos Genomics turns primary spike sequences into experimental
+          structural risk signals — without waiting for a formal lineage
+          classification. Analysis time is separate from the time since
+          deposition; clinical and operational lead time are not established.
         </p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Button

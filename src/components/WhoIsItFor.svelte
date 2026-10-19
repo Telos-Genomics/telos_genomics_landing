@@ -5,43 +5,43 @@
     {
       num: "01",
       title: "Life & Health Reinsurers",
-      short: "Anticipate pandemic loss spikes before they appear in claims.",
+      short: "Explore pandemic loss exposure before it reaches claims.",
       detail:
-        "COVID-19 cost global insurers over $203B — $107B in claims plus $96B in investment losses (Lloyd's of London), almost all of it priced after the fact. Telos-S flags the structural risk profile of an emerging variant within days of its GenBank release — XFG.5.1.7 scored 2280.5 five days post-release — while lineage characterization is still pending. Whether that head start converts into clinical lead time is now under prospective test.",
+        "COVID-19 cost global insurers over $203B — $107B in claims plus $96B in investment losses (Lloyd's of London), almost all of it priced after the fact. Telos-S can score a newly deposited sequence without waiting for lineage characterization; in a documented retrospective case, XFG.5.1.7 was scored 2280.5 five days after its GenBank release. Whether that head start converts into clinical lead time is under prospective test.",
       tag: "Reinsurance",
     },
     {
       num: "02",
       title: "Supply Chain Operators",
       short:
-        "Identify viral risk in critical logistics nodes before disruption.",
+        "Explore viral risk in critical logistics nodes before disruption.",
       detail:
-        "The pandemic's global macro impact is estimated by the IMF at $13.8 trillion, with viral outbreaks at port cities and manufacturing hubs cascading into networks. Telos-S flags structural risk at origin within days of sequence deposition — before absenteeism and lockdowns cascade.",
+        "The pandemic's global macro impact is estimated by the IMF at $13.8 trillion, with viral outbreaks at port cities and manufacturing hubs cascading into networks. Telos-S can score sequences from affected regions once their FASTA is available, adding an experimental structural signal to continuity planning — not a forecast of absenteeism or lockdowns.",
       tag: "Logistics",
     },
     {
       num: "03",
       title: "Airlines & Route Risk",
-      short: "Monitor variant aggressiveness across high-connectivity routes.",
+      short: "Monitor structural risk signals across high-connectivity routes.",
       detail:
-        "Every major variant entered new continents through a small number of hub airports — Dubai, Frankfurt, Tocumen, Changi. Telos-S explores 279 airports — 78 with direct service to Tocumen — each with nearby crowd foci. You see the risk profile while the route is still becoming the vector.",
+        "Many major variants have entered new continents through a small number of hub airports — Dubai, Frankfurt, Tocumen, Changi. The explorer covers 279 entry-point airports, including a dated snapshot of 78 destinations with direct Copa service to Tocumen, each with nearby crowd foci (Haversine approximations, not traffic volumes). Explore illustrative entry-point scenarios; the spread model is not a calibrated epidemiological forecast.",
       tag: "Aviation",
     },
     {
       num: "04",
       title: "Laboratories & Pharma",
       short:
-        "Structural mutation signals to orient antiviral and vaccine development.",
+        "Structural mutation signals to orient antiviral and vaccine research.",
       detail:
-        "Knowing which positions are most likely to mutate next — before those mutations circulate — compresses the development window. Telos Prophet predicts probable mutation pathways at key sites (RBM-452, RBM-484, RBM-501, Furin-681) with structural probability scores.",
+        "Telos Prophet generates model-derived substitution candidates at key sites (RBM-452, RBM-484, RBM-501, Furin-681), providing exploratory hypotheses for research and monitoring. These are not calibrated probabilities or validated forecasts of future evolution.",
       tag: "Biotech",
     },
     {
       num: "05",
       title: "Investment & Sovereign Risk Funds",
-      short: "Epidemiological intelligence as input for systemic risk models.",
+      short: "Experimental structural intelligence as one input for systemic risk models.",
       detail:
-        "Pandemic-sensitive sectors — aviation, hospitality, consumer discretionary, healthcare — move ahead of official WHO declarations. Telos-S provides a structural risk signal available within days of sequence deposition, ahead of formal lineage designation, as an input to portfolio risk models. Its clinical lead time is the hypothesis now under prospective test.",
+        "Pandemic-sensitive sectors — aviation, hospitality, consumer discretionary, healthcare — can reprice before official WHO declarations. Telos-S provides an experimental structural signal from primary sequence, without waiting for formal lineage designation, as one input to portfolio risk models. Its clinical lead time is the hypothesis under prospective test.",
       tag: "Finance",
     },
   ];

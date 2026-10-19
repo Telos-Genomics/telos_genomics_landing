@@ -143,11 +143,11 @@
     { type: "critical", text: "  N501Y  pos 501  LLR +3.2  RBM" },
     { type: "critical", text: "  P681H  pos 681  LLR +5.2  FCS" },
     { type: "divider", text: "─────────────────────────────────" },
-    { type: "label", text: "Prophet predictions:" },
-    { type: "prophet", text: "  pos 452 → G  8.7% structural" },
-    { type: "prophet", text: "  pos 681 → K  6.2% structural" },
+    { type: "label", text: "Prophet candidates (model-derived):" },
+    { type: "prophet", text: "  pos 452 → G  8.7% model score" },
+    { type: "prophet", text: "  pos 681 → K  6.2% model score" },
     { type: "divider", text: "─────────────────────────────────" },
-    { type: "label", text: "Lead time     scored within days" },
+    { type: "label", text: "Signal        from FASTA; lead time n/e" },
     { type: "alert", text: "Status        MONITOR ACTIVE" },
   ];
 
@@ -447,7 +447,7 @@
         {/each}
         <span class="flex items-center gap-2">
           <span class="w-2 h-2 rounded-full bg-[#ef5b5b]"></span>
-          <span class="text-[#555]">Prophet sites · forecasted, not weighted</span>
+          <span class="text-[#555]">Prophet sites · candidate substitutions, not weighted</span>
         </span>
       </div>
 
