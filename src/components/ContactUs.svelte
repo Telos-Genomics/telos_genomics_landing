@@ -99,8 +99,9 @@
         </h2>
       </div>
       <p class="text-sm text-[#555] max-w-sm leading-relaxed md:mb-2">
-        We're currently onboarding select partners for pilot programs. Tell us
-        about your organization and we'll follow up within 48 hours.
+        We're working with select partners on scoped pilots using their
+        sequences and workflows. Tell us about your organization and we'll
+        follow up to discuss fit, scope and next steps.
       </p>
     </div>
 
@@ -322,8 +323,8 @@
             >
           </div>
           <p class="text-[0.65rem] font-mono text-[#555] leading-relaxed">
-            Pre-seed stage. Selective onboarding for reinsurance, supply chain,
-            and aviation sectors.
+            Early-stage. Selective pilots for reinsurance, supply chain,
+            aviation and laboratory workflows.
           </p>
         </div>
       </div>

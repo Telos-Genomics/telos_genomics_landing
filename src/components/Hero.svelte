@@ -89,18 +89,14 @@
         <h1
           class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
         >
-          Structural Genomic
-        </h1>
-        <h1
-          class="md:mb-8 text-4xl font-extrabold text-gray-300 text-center tracking-tight md:text-5xl md:leading-(--5xl-line-height) xl:text-6xl xl:leading-(--6xl-line-height)"
-        >
-          Surveillance Engine
+          Structural Genomic Surveillance Engine
         </h1>
         <p
           class="mb-4 mt-10 font-light text-gray-300 text-center lg:mb-4 md:text-lg lg:text-2xl sm:px-0 lg:px-0 xl:px-0"
         >
-          Telos Genomics transforms genomic sequences into early structural
-          risk signals — within days of public sequence deposition.
+          Telos-S analyzes user-provided FASTA sequences to generate structural
+          scores, quality assessments and exploratory evolutionary insights —
+          helping teams investigate emerging variants sooner.
         </p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
           <Button
